@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,8 +12,8 @@ public class Main {
 
         File file = new File("TruthTables.txt");
         FileWriter fw = new FileWriter(file);
-
-        String input = "(A&&B)";
+        Scanner kbinput = new Scanner (System.in);
+        String input = kbinput.nextLine();
         TrueFalseVariable[] key =  Operators.GetTruthKey(input, 0);
         String[] TruthTable = getTruthHeader(input, key);
 
